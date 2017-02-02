@@ -17,7 +17,7 @@
     $ git clone https://github.com/patrykcieszkowski/comet-frontend.git
     $ npm install // install dependencies
   ```
-  Once you do so, remember to config the webpack, before your start building an app. You should set your CDN url (public path), as well as URLs to the backend part of the app (API and Socket.IO), which you can find HERE(https://github.com/patrykcieszkowski/comet-backend). After you got this done, you can start compiling:
+  Once you do so, remember to config the webpack, before your start building an app. You should set your CDN url (public path), as well as URLs to the backend part of the app (API and Socket.IO), which you can find [HERE](https://github.com/patrykcieszkowski/comet-backend). After you got this done, you can start compiling:
 
   ```js
     $ npm run build
@@ -46,7 +46,7 @@
   - SASS
   - Google maps
 
-  and much, much more. For full list you might want to check the project. Also, if you'd like to see list of techs/modules used on the back-end, go HERE(https://github.com/patrykcieszkowski/comet-backend)
+  and much, much more. For full list you might want to check the project. Also, if you'd like to see list of techs/modules used on the back-end, go [HERE](https://github.com/patrykcieszkowski/comet-backend)
 
 # Contributors [^](#contributors-)
 
