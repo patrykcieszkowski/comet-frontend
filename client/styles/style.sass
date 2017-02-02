@@ -1,0 +1,1040 @@
+*
+  font-family: 'Open Sans', sans-serif
+  // font-family: 'Roboto', sans-serif
+
+.block
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+  width: 100%
+
+@mixin input-placeholder($color)
+  &::-webkit-input-placeholder
+    color: $color
+  &:-moz-placeholder
+    color: $color
+  &::-moz-placeholder
+    color: $color
+  &:-ms-input-placeholder
+    color: $color
+
+button.submit
+  border: 0
+  width: 100%
+  padding: 12px 10px
+  background: #1fae80
+  border-radius: 25px
+  color: #fff
+  font-size: 14px
+  text-transform: uppercase
+
+.mobile, .sidebar
+  display: flex
+  flex-direction: column
+  flex: 1
+  height: 100vh
+
+.sidebar
+  min-width: 400px
+  max-width: 400px
+
+.desktop
+  overflow: hidden
+  display: flex
+  flex-direction: row
+  height: 100vh
+
+  .main.chat, footer
+    border-left: 1px solid #e3e3e3
+
+.user
+  position: relative
+  border-radius: 50%
+  width: 45px
+  height: 45px
+
+  img.avatar
+    border-radius: 50%
+    width: 45px
+    height: 45px
+    flex-shrink: 0
+    flex-grow: 0
+
+  .status
+    position: absolute
+    bottom: 6px
+    right: 0px
+
+  &.border
+    border: 2px solid #fff
+
+.user_details
+  flex-direction: column
+  justify-content: center
+  align-items: flex-start
+  padding: 0 10px
+  height: 100%
+  flex-basis: 100%
+
+  span.name
+    padding: 5px 0
+
+  .user_status
+    display: flex
+    flex-direction: row
+    align-items: center
+    height: auto
+    width: auto
+    font-size: 14px
+
+    &:before
+      content: ''
+      display: block
+      height: 10px
+      width: 10px
+      border-radius: 50%
+      margin-right: 5px
+
+    &.online
+      &:before
+        background: #9acd46
+    &.offline
+      &:before
+        background: #dbdbdb
+
+.status
+  display: block
+  height: 10px
+  width: 10px
+  border-radius: 50%
+
+  &.online
+    background: #9acd46
+  &.offline
+    background: #dbdbdb
+
+.bubble
+  position: absolute
+  top: 0
+  display: block
+  height: 20px
+  width: 20px
+  line-height: 20px
+  text-align: center
+  font-size: 13px
+  border-radius: 50%
+  background: #1fae80
+  color: #fff
+
+  &.left
+    left: -5px
+  &.right
+    right: -5px
+
+a.hide
+  text-decoration: none
+  position: absolute
+  bottom: -15px
+  left: 50%
+  transform: translate(-50%, 0)
+  display: flex
+  justify-content: center
+  align-items: center
+  background: #1fae80
+  border-radius: 50%
+  height: 35px
+  width: 35px
+  border: none
+  z-index: 10
+
+  i
+    border: none
+    display: block
+    font-size: 32px
+    line-height: 35px
+    height: 35px
+    width: 35px
+    text-align: center
+    color: #fff
+
+label.switch
+  margin: 0 15px
+  display: flex
+  position: relative
+  width: 40px
+  height: 8px
+
+  input
+    display: none
+
+  .slider
+    position: absolute
+    cursor: pointer
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: #ccc
+    transition: 0.4s
+    border-radius: 34px
+
+    &:before
+      position: absolute
+      content: ""
+      height: 20px
+      width: 20px
+      left: 0px
+      bottom: -6px
+      background: #a4a4a4
+      transition: 0.4s
+      border-radius: 50%
+
+  input:checked + .slider:before
+    background: #1fae80
+    transform: translateX(20px)
+
+.radio-toggler
+  span.title
+    font-size: 16px
+
+  label.side
+    position: relative
+    flex: 1
+    display: flex
+    flex-direction: row
+    border: 2px solid
+    border-color: #dbdbdb
+    background: #fff
+    // overflow: hidden
+    height: 30px
+
+    &:nth-of-type(1)
+      border-radius: 20px 0 0 20px
+      border-right: 0
+
+    &:nth-of-type(2)
+      border-radius: 0 20px 20px 0
+      border-left: 0
+
+    input
+      display: none
+
+    span.title
+      font-size: 13px
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: center
+      position: absolute
+      top: -2px
+      bottom: -2px
+      left: -4px
+      right: -4px
+      text-align: center
+      padding: 5px 15px
+      border-radius: 20px
+
+    input:checked + span.title
+      background: #1fae80
+      border-color: #1fae80
+      color: #fff
+      padding: 5px 15px
+      flex: 1
+      z-index: 10
+
+span.icon
+  &.black
+    filter: invert(0.8)
+
+  &.edit
+    display: block
+    width: 12px
+    height: 12px
+    margin: 0 2px
+    background: url('../img/icons/edit.png') no-repeat
+  &.delete
+    display: block
+    width: 12px
+    height: 12px
+    margin: 0 2px
+    background: url('../img/icons/delete.png') no-repeat
+  &.phone
+    display: block
+    width: 20px
+    height: 20px
+    margin: 0 2px
+    background: url('../img/icons/phone.png') no-repeat
+  &.sign-out
+    display: block
+    width: 15px
+    height: 15px
+    margin: 0 2px
+    background: url('../img/icons/log_off.png') no-repeat
+  &.smile
+    display: block
+    width: 22px
+    height: 22px
+    margin: 0 2px
+    background: url('../img/icons/smile.png') no-repeat
+  &.back
+    display: block
+    width: 17px
+    height: 27px
+    margin: 0 2px
+    background: url('../img/icons/back.png') no-repeat
+  &.arrow_up
+    display: block
+    width: 19px
+    height: 20px
+    margin: 0
+    background: url('../img/icons/arrow_up.png') no-repeat
+  &.send
+    display: block
+    width: 32px
+    height: 32px
+    margin: 0 2px
+    background: url('../img/icons/send.png') no-repeat
+  &.accept
+    display: block
+    width: 12px
+    height: 10px
+    margin: 0 2px
+    background: url('../img/icons/check.png')
+
+ul
+  padding: 0
+  margin: 0
+
+body
+  color: #2b2b2b
+  padding: 0
+  margin: 0
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+
+  a
+    color: #2b2b2b
+    text-decoration: none
+
+  .content-wrapper, .app-wrapper
+    display: flex
+    flex-direction: column
+    flex: 1
+
+  .content-wrapper
+    &.auth
+      background: #1b1216 url('../img/bg.png')
+      background-size: contain
+      background-repeat-y: no-repeat
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: flex-start
+      padding-top: 100px
+
+header.top
+  nav
+    height: 64px
+    background: #1fae80
+    ul
+      height: 100%
+      display: flex
+      flex-direction: row
+      justify-content: space-around
+      list-style: none
+      padding: 0
+      margin: 0
+
+      li
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: center
+        flex-shrink: 0
+        flex-grow: 0
+        flex-basis: 60px
+
+        *
+          color: #fff
+
+        a
+          text-decoration: none
+          display: flex
+          flex-direction: row
+          flex-grow: 1
+          align-items: center
+          justify-content: center
+          border-bottom: 4px solid transparent
+          height: calc(100% - 4px)
+          &.active
+            border-color: #43ddae
+
+          i
+            font-size: 30px
+
+    &.chat
+      display: flex
+      flex-direction: row
+      align-items: center
+      padding: 0 10px
+
+      a.back
+        text-decoration: none
+        display: flex
+        flex-direction: row
+        align-items: center
+
+        i
+          font-size: 54px
+          color: #fff
+
+      .user_details
+        color: #fff
+        span.name
+          font-weight: 800
+          font-size: 16px
+          letter-spacing: 0.4px
+
+article.main
+  flex: 1
+  // background: #282c34
+  background: #fff
+  height: 100%
+  // background: url('../img/bg.png') center center
+  display: flex
+  flex-direction: column
+
+  &.empty
+    align-items: center
+    justify-content: center
+    .block
+      &.error
+        flex-direction: column
+        color: grey
+
+        h1
+          color: gray
+          text-align: center
+          font-size: 60px
+          font-weight: 400
+          margin: 2px 0
+
+  header.info
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding: 10px
+    background: url('../img/bg.png') bottom center
+    flex-shrink: 0
+    flex-grow: 0
+
+    .new
+      overflow: hidden
+      width: 100%
+      flex: 1
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      color: #fff
+
+      ul.faces
+        display: flex
+        flex-direction: row
+        align-items: center
+        list-style: none
+        margin: 5px
+
+        li
+          padding: 4px
+
+      .info
+        margin: 15px 5px
+        font-size: 16px
+        display: block
+        padding: 5px 20px
+        border-radius: 20px
+        border: 2px solid #1fae80
+        // color: rgba(#fff, 0.8)
+        letter-spacing: 0.2px
+
+    .user-settings
+      width: 100%
+      max-width: 275px
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: space-around
+      flex: 1
+
+      .block
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: center
+        width: 100%
+        color: #fff
+
+        &.name
+          input[type=text]
+            padding: 2px 5px
+            font-size: 18px
+            // background: 0
+            color: #000
+            border: none
+            // font-style: italic
+            max-width: calc(50% - 2px)
+            margin: 0 2px
+          span.name
+            font-size: 22px
+          i
+            padding-left: 5px
+            font-size: 16px
+
+      a
+        text-decoration: none
+        color: #fff
+
+        &.sign-out
+          font-size: 13px
+          text-transform: uppercase
+          padding: 8px 22px
+          border-radius: 15px
+          /* border: 2px solid #1fae80; */
+          box-shadow: inset 0 0 0 2px #1fae80, inset 0 0 0 0px #1fae80
+          transition: 0.1s ease-in-out
+          letter-spacing: 0.2px
+          display: flex
+          flex-direction: row
+          align-items: center
+
+          &:hover
+            box-shadow: inset 0 0 0 1px #1fae80, inset 0 0 0 16px #1fae80
+
+    .user-status
+      width: 100%
+      max-width: 275px
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: space-around
+      flex: 1
+
+      .block
+        &.set_status
+          span.title
+            margin: 0 15px
+
+      fieldset
+        padding: 0
+        border: 0
+
+    .search
+      max-width: 295px
+      padding-bottom: 25px
+      width: 100%
+      flex: 1
+
+      .block
+        &.spacer
+          padding-bottom: 10px
+
+        &.online-check
+          label
+            input
+              display: none
+
+            span.title
+              display: flex
+              flex-direction: row
+              align-items: center
+              justify-content: flex-start
+              font-size: 14px
+
+              &:before
+                display: block
+                width: 25px
+                height: 20px
+                line-height: 20px
+                vertical-align: middle
+                text-align: center
+                background: #1fae80
+                margin-right: 5px
+                color: #fff
+                border-radius: 10px
+                content: ' '
+
+            input:checked + span.title
+              &:before
+                content: url('../img/icons/check.png')
+
+        &.dobule
+          .block
+            &:first-of-type
+              justify-content: flex-start
+            &:last-of-type
+              justify-content: flex-end
+
+  section.user-details
+    flex: 1
+    padding: 0
+    display: flex
+    flex-direction: column
+    background: #fff
+
+    .block
+      &.list
+        position: relative
+
+        &::before
+          display: block
+          content: " "
+          position: absolute
+          top: -15px
+          border-left: 15px solid transparent
+          border-right: 15px solid transparent
+          border-bottom: 15px solid #f5f5f5
+
+    ul
+      width: 100%
+      list-style: none
+      li
+        padding: 20px 10px
+        background: #f5f5f5
+        background: #f5f5f5
+        border-bottom: 1px solid #e3e3e3
+
+        &:hover
+          background: #f0f0f0
+          border-left: 4px solid #1fae80
+          padding-left: 6px
+          color: #2b2b2b
+
+  .setting-details
+    // flex: 1
+    background: #fff
+    // display: flex
+    flex-direction: column
+    position: relative
+    padding: 30px 25px
+
+    .block
+      &.input
+        justify-content: space-between
+
+      &.phone
+        border-radius: 20px
+        border: 2px solid #1fae80
+        background: #1fae80
+        overflow: hidden
+
+        .block
+          height: 36px
+
+        i
+          padding: 5px 10px
+          color: #fff
+
+        .number
+          background: #fff
+          flex: 1
+        .actions
+          justify-content: flex-end
+          padding: 0 5px
+          padding-right: 10px
+
+          &.center
+            justify-content: center
+
+          a
+            padding: 0 5px
+            i
+              padding: 0 5px
+              font-size: 13px
+              color: #5c5c5c
+
+        .phone_inputs
+          justify-content: flex-start
+          input[type=number]
+            &[name=phone_code]
+              width: 50px
+
+            font-size: 16px
+            color: #000
+            margin: 0 2px
+
+      &.list
+        ul
+          width: 100%
+          padding: 15px 0
+          margin: 0
+          list-style: none
+          display: flex
+          flex-direction: column
+
+          li
+            padding: 10px 0
+
+            span
+              font-size: 14px
+
+  .contact-list
+    flex: 1
+    background: #f5f5f5
+    border-top: 1px solid #e3e3e3
+    display: flex
+    flex-direction: column
+
+    &.content
+      border: 0
+      &.msg
+        padding: 0
+
+    &.search, &.msg
+      .item
+        a
+          &:hover, &:active, &.new
+            background: #f0f0f0
+            color: #2b2b2b
+
+          &:hover, &:active
+            border-left: 4px solid #1fae80
+            padding-left: 6px
+
+          .block
+            justify-content: flex-start
+            align-items: center
+
+            &.actions
+              i
+                color: #1eae80
+                transform: rotate(-45deg)
+
+    &.search
+      background: #f5f5f5
+      .item
+        a
+          padding: 15px 25px
+          &:hover
+            padding-left: 21px
+
+          .block.user_details
+            flex-direction: column
+            align-items: flex-start
+            justify-content: center
+            padding: 0 15px
+
+            span.name
+              padding: 0
+
+    &.msg
+      padding: 12px 0
+      background: #fff
+      .item
+        a
+          .block
+            justify-content: flex-start
+            align-items: center
+
+          .post_info
+            padding: 0 15px
+            display: flex
+            flex-direction: column
+            justify-content: center
+            height: 100%
+
+            span.name
+              padding: 3px 0
+
+            p.msg
+              font-size: 13px
+              padding: 3px 0
+              margin: 0
+              color: #7a7a7a
+
+          span.date
+            font-size: 13px
+
+    .item
+      a
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        flex: 1
+        text-decoration: none
+        height: 66px
+        overflow: hidden
+        padding: 4px 10px
+        border-bottom: 1px solid #dbdbdb
+
+        &:hover, &:active
+          background: #1fae80
+          background: linear-gradient(45deg, #38ae87, #5ac281)
+          color: #fff
+
+          .block
+            i
+              color: #fff
+
+        .block
+          display: flex
+          flex-direction: row
+          align-items: center
+
+          &.double
+            &:first-of-type
+              flex-basis: 70%
+              flex-shrink: 0
+
+            &:last-of-type
+              justify-content: flex-end
+              flex-grow: 0 !important
+              // flex: 1
+              flex-basis: 100px
+
+          span.name
+            // flex: 1
+            font-weight: 800
+            padding: 0 10px
+
+          i
+            color: #757575
+
+          &:nth-of-type(1)
+            flex: 1
+
+  section.text-block
+    border-top: 1px solid #e3e3e3
+    border-bottom: 1px solid #e3e3e3
+    background: #f8f8f8
+    flex: 1
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    overflow: hidden
+
+    h2
+      // color: #ccc
+      color: grey
+      font-size: 20px
+      font-weight: 400
+      margin-bottom: 6px
+
+  .conversation
+    border-top: 1px solid #e3e3e3
+    border-bottom: 1px solid #e3e3e3
+    background: #f8f8f8
+    flex: 1
+    display: flex
+    flex-direction: column
+    overflow: hidden
+
+    .events
+      display: flex
+      flex-direction: column
+      flex: 1
+      overflow: hidden
+      // overflow-y: scroll
+      // justify-content: flex-end
+      padding: 10px 0
+
+      .event_single
+        flex-shrink: 0
+        &.block
+          width: auto !important
+          flex-direction: column
+        &.message
+          margin: 2px 10px
+          .text
+            max-width: 50%
+            margin: 1px 0
+            padding: 10px 20px
+            background: #e9e9e9
+            font-size: 14px
+
+          &.right
+            align-items: flex-end
+            .text
+              border-radius: 15px
+              // border-radius: 15px 0 0 15px
+
+              // &:first-of-type
+              //   border-radius: 15px 15px 0 15px
+
+          &.left
+            align-items: flex-start
+            .text
+              color: #fefefe
+              background: #0caf7f
+              border-radius: 15px
+              // border-radius: 0 15px 15px 0
+              //
+              // &:first-of-type
+              //   border-radius: 15px 15px 15px 0
+
+footer
+  display: flex
+  flex-direction: row
+
+  .block
+    &:first-of-type
+      flex-shrink: 0
+      flex-basis: calc(100% - 40px)
+    &:last-of-type
+      flex-grow: 0
+
+      i
+        color: #757575
+        transition: 0.2s
+
+        &:hover
+          color: #000
+
+    input.message_input
+      flex: 1
+      padding: 20px 15px
+      border: none
+      font-size: 13px
+      color: #757575
+
+article.loading-screen
+  display: flex
+  height: 100vh
+  width: 100%
+  justify-content: center
+  align-items: center
+  background: #1fae80
+  background: linear-gradient(45deg, #38ae87, #5ac281)
+
+  .loader
+  position: relative
+
+  .one
+    position: absolute
+    border-radius: 50%
+    background: #FFFFFF
+    opacity: .0
+    animation: loading 1.3s .65s infinite
+    height: 20px
+    width: 20px
+
+  .two
+    position: absolute
+    border-radius: 50%
+    background: #cccccc
+    opacity: .0
+    animation: loading 1.3s infinite
+    height: 20px
+    width: 20px
+
+  @keyframes loading
+    0%
+      opacity: .0
+      transform: scale(0.15)
+      box-shadow: 0 0 2px rgba(black, 0.1)
+
+    50%
+      opacity: 1
+      transform: scale(2)
+      box-shadow: 0 0 10px rgba(black, 0.1)
+
+    100%
+      opacity: .0
+      transform: scale(0.15)
+      box-shadow: 0 0 2px rgba(black, 0.1)
+
+article.auth-form
+  width: 400px
+  display: flex
+  flex-direction: column
+  align-items: center
+
+  .logo
+    display: flex
+    flex-direction: column
+    // height: 119px
+    width: 145px
+
+    &:before
+      content: url('../img/logo.png')
+      display: block
+      height: 119px
+      width: 145px
+    &:after
+      padding: 10px 0
+      display: block
+      font-size: 34px
+      font-weight: 300
+      text-align: center
+      color: #fff
+      content: 'comet'
+
+  .block
+    width: 300px
+
+  form
+    padding: 15px 0
+
+    .radio-toggler
+      width: 200px
+      margin: 10px 0
+
+    button.submit
+      margin: 10px 0
+    a.link
+      display: block
+      color: #fff
+      text-transform: uppercase
+      font-size: 12px
+      text-align: center
+
+  .input
+    input
+      background: none
+      // background: rgba(255, 255, 255, 0.03)
+      color: #fff
+      font-size: 14px
+
+      @include input-placeholder(rgba(#fff, 0.6))
+
+    .fake-border
+      border-color: #503f48
+
+.input
+  position: relative
+  width: 100%
+  display: flex
+  flex-direction: row
+  align-items: baseline
+  padding: 5px 0
+
+  .fake-border
+    position: absolute
+    left: -1px
+    bottom: 4px
+    width: 100%
+    display: block
+    height: 5px
+    border: 1px solid #dcdcdc
+    border-top: 0px
+
+  > :first-child
+    position: relative
+    z-index: 10
+
+  input
+    padding: 10px 15px
+    font-size: 18px
+    border: none
+    width: 100%
+
+  div
+    input
+      width: calc(100% - 30px)
+
+    // border-bottom: 1px solid #000
