@@ -2,7 +2,7 @@ import React from 'react'
 import SettingsHeader from './partials/settings/SettingsHeader'
 import SettingsContent from './partials/settings/SettingsContent'
 
-export default class Settings extends React.Component
+class Settings extends React.Component
 {
   render()
   {
@@ -14,3 +14,9 @@ export default class Settings extends React.Component
     )
   }
 }
+
+Settings.defaultProps = {
+  displayName: 'settings'
+}
+
+export default Settings

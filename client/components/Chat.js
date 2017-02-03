@@ -3,7 +3,7 @@ import ChatHeader from './partials/chat/ChatHeader'
 import ChatFooter from './partials/chat/ChatFooter'
 import ChatList from './partials/chat/ChatList'
 
-export default class Chat extends React.Component
+class Chat extends React.Component
 {
   componentWillMount()
   {
@@ -87,3 +87,9 @@ export default class Chat extends React.Component
     )
   }
 }
+
+Chat.defaultProps = {
+  displayName: 'chat'
+}
+
+export default Chat

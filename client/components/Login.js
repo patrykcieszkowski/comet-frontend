@@ -3,7 +3,7 @@ import {Link, IndexLink} from 'react-router'
 import ReactTooltip from 'react-tooltip'
 import {io} from '../Store'
 
-export default class Login extends React.Component
+class Login extends React.Component
 {
   constructor(props)
   {
@@ -73,3 +73,9 @@ export default class Login extends React.Component
     )
   }
 }
+
+Login.defaultProps = {
+  displayName: 'login'
+}
+
+export default Login

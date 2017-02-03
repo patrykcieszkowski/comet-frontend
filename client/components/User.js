@@ -2,7 +2,7 @@ import React from 'react'
 import UserHeader from './partials/user/UserHeader'
 import UserContent from './partials/user/UserContent'
 
-export default class User extends React.Component
+class User extends React.Component
 {
   render()
   {
@@ -14,3 +14,9 @@ export default class User extends React.Component
     )
   }
 }
+
+User.defaultProps = {
+  displayName: 'user'
+}
+
+export default User

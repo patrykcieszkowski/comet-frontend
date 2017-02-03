@@ -2,7 +2,7 @@ import React from 'react'
 import SearchForm from './partials/search/SearchForm'
 import SearchList from './partials/search/SearchList'
 
-export default class Search extends React.Component
+class Search extends React.Component
 {
   render()
   {
@@ -14,3 +14,9 @@ export default class Search extends React.Component
     )
   }
 }
+
+Search.defaultProps = {
+  displayName: 'search'
+}
+
+export default Search

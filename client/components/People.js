@@ -2,7 +2,7 @@ import React from 'react'
 import PeopleHeader from './partials/people/PeopleHeader'
 import PeopleList from './partials/people/PeopleList'
 
-export default class People extends React.Component
+class People extends React.Component
 {
   render()
   {
@@ -14,3 +14,9 @@ export default class People extends React.Component
     )
   }
 }
+
+People.defaultProps = {
+  displayName: 'people'
+}
+
+export default People

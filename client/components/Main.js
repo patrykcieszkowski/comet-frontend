@@ -49,7 +49,7 @@ export default class Main extends React.Component
     {
       // replace chat view with Home view
       // and prevent header from being displayed
-      if (this.props.children.type.name === "Chat")
+      if (component.props.displayName === "chat")
       {
         if (sidebarBool)
         {
@@ -72,7 +72,10 @@ export default class Main extends React.Component
 
   renderHeader(chatHeaderBool, sidebarBool)
   {
-    if (!chatHeaderBool || (!chatHeaderBool && this.props.params.chatId)) return null
+    if (!chatHeaderBool || (!chatHeaderBool && this.props.params.chatId))
+    {
+      return null
+    }
 
     return (
       <Header />

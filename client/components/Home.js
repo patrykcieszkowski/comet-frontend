@@ -4,7 +4,7 @@ import HomeHeader from './partials/home/HomeHeader'
 import HomeList from './partials/home/HomeList'
 import UserIcon from './partials/assets/UserIcon'
 
-export default class Home extends React.Component
+class Home extends React.Component
 {
   render()
   {
@@ -41,7 +41,7 @@ export default class Home extends React.Component
         <article className="main empty">
           <div className="block error">
             <h1>\ (o_o) /</h1>
-            <p>You don't have any messages.</p>            
+            <p>You don't have any messages.</p>
           </div>
         </article>
       )
@@ -55,3 +55,9 @@ export default class Home extends React.Component
     )
   }
 }
+
+Home.defaultProps = {
+  displayName: 'home'
+}
+
+export default Home

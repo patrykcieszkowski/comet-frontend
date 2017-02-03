@@ -4,7 +4,7 @@ import {Link, IndexLink} from 'react-router'
 import Autocomplete from 'react-autocomplete'
 import RadioToggler from './partials/assets/RadioToggler'
 
-export default class Signup extends React.Component
+class Signup extends React.Component
 {
   constructor(props)
   {
@@ -153,3 +153,9 @@ export default class Signup extends React.Component
     )
   }
 }
+
+Signup.defaultProps = {
+  displayName: 'signup'
+}
+
+export default Signup
