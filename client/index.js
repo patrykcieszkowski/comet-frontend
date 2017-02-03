@@ -84,7 +84,7 @@ const router = (
       <Route path="/auth" component={AuthApp} onEnter={onAuthEnter}>
         <IndexRedirect to="login"></IndexRedirect>
         <Route path="login" component={Login} name="login"></Route>
-        // <Route path="signup" component={Signup} name="signup"></Route>
+        <Route path="signup" component={Signup} name="signup"></Route>
       </Route>
     </Router>
   </Provider>

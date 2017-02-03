@@ -24,7 +24,6 @@ export default class UserHeader extends React.Component
     let memberList = [person.user._id, user._id].sort()
     let conv = conversations.find((conv) =>
     {
-      console.log(conv)
       return (conv.members.length == 2 && conv.members.sort().every((el, n) => (el === memberList[n])))
     })
 
