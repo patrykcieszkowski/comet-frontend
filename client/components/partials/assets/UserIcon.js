@@ -33,8 +33,10 @@ export default class UserIcon extends React.Component
       }
     }
 
+    let wrapperClass = 'user' + ' ' + ((this.props.border) ? 'border' : '')
+
     return (
-      <div style={sizeStyle} className={'user '+ (this.props.border) ? 'border' : ''}>
+      <div style={sizeStyle} className={wrapperClass}>
         <img src={image} style={sizeStyle} className="avatar" />
         {this.renderStatus()}
         {this.renderBubble()}
